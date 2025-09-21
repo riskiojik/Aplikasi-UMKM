@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".EditProdukActivity">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/blueawan"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_baseline_arrow_back"
+            android:tint="@android:color/white"
+            android:contentDescription="Kembali" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Edit Produk"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Konten Utama -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/produkIconIv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_baseline_add_shopping_cart_yellow"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:contentDescription="Foto Produk" />
+
+        <EditText
+            android:id="@+id/titleEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Nama Barang"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp"
+            android:inputType="textCapSentences" />
+
+        <EditText
+            android:id="@+id/deskripsiEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Deskripsi Produk"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:id="@+id/categoryTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Kategori"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/quantityEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Jumlah Barang"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/priceEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Harga"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp"
+            android:inputType="numberDecimal" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/diskonswitch"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:text="Aktifkan Diskon" />
+
+        <EditText
+            android:id="@+id/diskonHargaEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Harga Setelah Diskon"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/diskonHargaNoteEt"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:hint="Catatan Diskon"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp"
+            android:inputType="textCapSentences" />
+
+    </LinearLayout>
+
+    <!-- Tombol Update -->
+    <Button
+        android:id="@+id/updateProdukBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Produk"
+        android:background="@color/blueawan"
+        android:textColor="@android:color/white"
+        android:layout_margin="0dp" />
+
+</LinearLayout>

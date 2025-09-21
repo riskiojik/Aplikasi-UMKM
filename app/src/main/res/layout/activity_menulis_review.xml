@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenulisReviewActivity">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:id="@+id/tokoDetailRl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blueawan"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_baseline_arrow_back"
+            android:contentDescription="Kembali"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/adamina"
+            android:text="Review Toko"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Foto Toko -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/profileTokoIv"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_below="@id/tokoDetailRl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_baseline_storefront"
+        android:backgroundTint="@android:color/white" />
+
+
+    <!-- Nama Toko -->
+    <TextView
+        android:id="@+id/namaTokoTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileTokoIv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/abel"
+        android:text="Nama Toko"
+        android:textColor="@color/bluedark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Pertanyaan -->
+    <TextView
+        android:id="@+id/experienceTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/namaTokoTv"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/abel"
+        android:gravity="center"
+        android:text="Bagaimana pelayanan dan pengalaman anda berbelanja di toko kami?\nBerikan tanggapan dan penilaian anda untuk meningkatkan pelayanan kami."
+        android:textColor="@color/bluedark"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <!-- Rating -->
+    <RatingBar
+        android:id="@+id/ratingTokoRb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/experienceTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:numStars="5"
+        android:stepSize="1.0" />
+
+    <!-- Komentar -->
+    <EditText
+        android:id="@+id/reviewEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratingTokoRb"
+        android:layout_margin="16dp"
+        android:background="@drawable/shape_komentar"
+        android:fontFamily="@font/abel"
+        android:hint="Tulis komentar.."
+        android:minHeight="100dp"
+        android:padding="12dp"
+        android:gravity="top"
+        android:inputType="textMultiLine|textCapSentences" />
+
+    <!-- Tombol Submit -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/done_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="@color/bluedark"
+        android:src="@drawable/ic_baseline_done"
+        android:contentDescription="Kirim Review" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blueawan"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu_navigation" />
+</RelativeLayout>

@@ -1,0 +1,234 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8E8"
+    tools:context=".penjual.MainPenjualActivity">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:id="@+id/ToolbarPenjual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blueawan"
+        android:padding="10dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/profileTv"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_baseline_storefront_grey"
+            android:backgroundTint="@color/white" />
+
+        <TextView
+            android:id="@+id/statusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/stroke_status"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:text="Status"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profileTv"
+            android:layout_alignTop="@id/profileTv"
+            android:layout_marginStart="12dp"
+            android:fontFamily="sans-serif"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/namaTokoTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:layout_alignStart="@id/nameTv"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif"
+            android:text="Nama toko"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/namaTokoTv"
+            android:layout_alignStart="@id/nameTv"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/btn_logout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/statusTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_logout"
+            android:contentDescription="Keluar" />
+
+        <ImageButton
+            android:id="@+id/btn_settting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/btn_logout"
+            android:layout_toStartOf="@id/btn_logout"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_settings"
+            android:contentDescription="Pengaturan" />
+
+        <LinearLayout
+            android:id="@+id/tabNavigasi"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/profileTv"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_tab"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tabProdukTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_tab1"
+                android:gravity="center"
+                android:text="Produk"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tabPesananTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Pesanan"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Layout Produk -->
+    <RelativeLayout
+        android:id="@+id/ProdukRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ToolbarPenjual"
+        android:layout_above="@id/bottom_navigation"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/serachProdukEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:drawableStart="@drawable/ic_baseline_search"
+            android:drawablePadding="10dp"
+            android:hint="Cari Produk"
+            android:padding="10dp"
+            android:background="@android:color/white" />
+
+        <ImageButton
+            android:id="@+id/categoryIbtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/serachProdukEt"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_assignment_category" />
+
+        <TextView
+            android:id="@+id/filterProdukTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/serachProdukEt"
+            android:layout_marginStart="8dp"
+            android:text="Tampilkan Semua"
+            android:textColor="@color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/showProdukRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/filterProdukTv"
+            android:layout_marginTop="5dp"
+            tools:listitem="@layout/activity_list_produk" />
+    </RelativeLayout>
+
+    <!-- Layout Pesanan -->
+    <RelativeLayout
+        android:id="@+id/PesananRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ToolbarPenjual"
+        android:layout_above="@id/bottom_navigation">
+
+        <TextView
+            android:id="@+id/filterPesananTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_tab1"
+            android:padding="10dp"
+            android:text="Menampilkan Seluruh Pesanan" />
+
+        <ImageButton
+            android:id="@+id/categoryPsnBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/filterPesananTv"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_assignment_category"
+            android:contentDescription="Kategori Pesanan" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pesananRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/filterPesananTv"
+            android:layout_marginTop="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:reverseLayout="true"
+            app:stackFromEnd="true"
+            tools:listitem="@layout/row_pesanan_penjual" />
+    </RelativeLayout>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blueawan"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

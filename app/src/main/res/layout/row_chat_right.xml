@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@android:color/white">
+
+    <!-- Foto Profil -->
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/profileIv"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_baseline_person_black"
+        android:visibility="gone"
+        app:civ_border="true"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/bluedark" />
+
+    <!-- Bubble Chat -->
+    <LinearLayout
+        android:id="@+id/chatBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/profileIv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:elevation="2dp"
+        android:background="@drawable/chat_bubble_sender"
+        android:maxWidth="280dp"> <!-- ganti dari 70% -->
+
+        <!-- Isi pesan -->
+        <TextView
+            android:id="@+id/messageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Isi pesan pengirim."
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif" />
+
+        <!-- Waktu dan ikon status -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01/06/2025"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray" />
+
+            <ImageView
+                android:id="@+id/statusIconIv"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="6dp"
+                android:src="@android:drawable/ic_menu_send"
+                app:tint="@android:color/darker_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Status 'Dilihat' -->
+    <TextView
+        android:id="@+id/isSeenTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chatBubble"
+        android:layout_alignEnd="@id/chatBubble"
+        android:layout_marginTop="4dp"
+        android:text="Dilihat"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray" />
+
+    <!-- Garis Pemisah -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/isSeenTv"
+        android:layout_marginTop="12dp"
+        android:background="#CCCCCC" />
+</RelativeLayout>

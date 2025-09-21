@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@android:color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- Gambar Produk -->
+        <ImageView
+            android:id="@+id/produkIconIv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            android:background="@color/white"
+            android:src="@drawable/ic_baseline_add_shopping_cart_yellow"
+            android:contentDescription="Foto Produk" />
+
+        <!-- Informasi Produk -->
+        <LinearLayout
+            android:id="@+id/Llproduk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/produkIconIv"
+            android:layout_alignTop="@id/produkIconIv"
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@id/nextIv"
+            android:orientation="vertical">
+
+            <!-- Label Diskon -->
+            <TextView
+                android:id="@+id/diskonHargaEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_red_light"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:text="50% OFF"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!-- Nama Produk -->
+            <TextView
+                android:id="@+id/titleEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Nama Produk"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <!-- Deskripsi Produk -->
+            <TextView
+                android:id="@+id/deskripsiEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Deskripsi Produk"
+                android:textColor="#555555"
+                android:textSize="13sp" />
+
+            <!-- Harga Produk -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <!-- Harga Diskon -->
+                <TextView
+                    android:id="@+id/hargaDiskon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 100"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Harga Normal -->
+                <TextView
+                    android:id="@+id/hargaNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Rp. 10.000"
+                    android:textColor="#888888"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Tombol Aksi -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/keranjangBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tambah ke Keranjang"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/blueawan"
+                    android:padding="6dp" />
+
+                <ImageButton
+                    android:id="@+id/favoritBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/btn_star_big_off"
+                    android:contentDescription="Favorit" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Tombol Navigasi Next -->
+        <ImageView
+            android:id="@+id/nextIv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_back"
+            android:contentDescription="Lihat Detail"
+            app:tint="#555555" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

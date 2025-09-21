@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas. android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ECEFF1"
+    tools:context=".ChatActivity">
+
+    <!-- Toolbar Chat -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blueawan"
+        android:padding="8dp"
+        android:elevation="4dp">
+
+        <!-- Foto Profil -->
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/profileIv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/whatsapp_image_2025_08_03_at_05_55_38"
+            android:contentDescription="Gambar Profil"
+            app:civ_border_color="@color/bluedark"
+            app:civ_border_width="1dp" />
+
+        <!-- Nama & Status -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/profileIv"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/NameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALdi Febriyan"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/StatusUserTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+
+        <!-- Tombol Panggilan -->
+        <ImageView
+            android:id="@+id/callBtn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_call"
+            android:contentDescription="Panggilan suara"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@android:color/white" />
+    </RelativeLayout>
+
+    <!-- Daftar Chat -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+    <!-- Input Pesan -->
+    <RelativeLayout
+        android:id="@+id/chatLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="#FFFFFF"
+        android:elevation="6dp">
+
+        <EditText
+            android:id="@+id/pesanEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/fltBtn_chat"
+            android:layout_marginEnd="8dp"
+            android:hint="Tulis pesan..."
+            android:padding="12dp"
+            android:background="@drawable/shape_chat"
+            android:inputType="textCapSentences|textMultiLine" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fltBtn_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/pesanEt"
+            android:src="@drawable/ic_baseline_send"
+            android:backgroundTint="@color/bluedark"
+            android:elevation="8dp"
+            android:contentDescription="Kirim pesan" />
+    </RelativeLayout>
+</LinearLayout>

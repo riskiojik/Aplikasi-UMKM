@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TambahProdukActivity"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blueawan"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/back_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_baseline_arrow_back"
+                    app:tint="@color/white"
+                    android:contentDescription="Kembali" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Tambah Produk"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/produkIconIv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_add_shopping_cart_yellow"
+                app:civ_border="true"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/blueawan"
+                android:contentDescription="Ikon Produk" />
+
+            <EditText
+                android:id="@+id/titleEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_01"
+                android:drawableStart="@drawable/ic_baseline_title_black"
+                android:drawablePadding="10dp"
+                android:hint="Nama barang"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:inputType="textCapSentences"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/deskripsiEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_01"
+                android:drawableStart="@drawable/ic_baseline_text_deskripsi"
+                android:drawablePadding="10dp"
+                android:hint="Deskripsi produk"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:inputType="textCapSentences"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/categoryTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_01"
+                android:drawableStart="@drawable/ic_baseline_assignment_category"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="Pilih Kategori"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/quantityEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_01"
+                android:drawableStart="@drawable/ic_baseline_shopping_cart_black"
+                android:drawablePadding="10dp"
+                android:hint="Jumlah barang"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:inputType="number"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/priceEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_01"
+                android:drawableStart="@drawable/ic_baseline_shopping_cart_black"
+                android:drawablePadding="10dp"
+                android:hint="Harga"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/diskonswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Diskon" />
+
+            <EditText
+                android:id="@+id/diskonHargaEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_01"
+                android:drawableStart="@drawable/ic_baseline_shopping_cart_black"
+                android:drawablePadding="10dp"
+                android:hint="Diskon harga"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/diskonHargaNoteEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_01"
+                android:drawableStart="@drawable/ic_baseline_shopping_cart_black"
+                android:drawablePadding="10dp"
+                android:hint="Keterangan Diskon"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:inputType="textCapSentences"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/addProdukBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/blueawan"
+                android:text="Tambah Produk"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="auto"
+    package="com.example.aplikasiumkm">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!-- Optional Features (for low-end compatibility) -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/umkm"
+        android:label="aldialdi@string/app_name"
+        android:roundIcon="@drawable/umkm"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AplikasiTitipOnline">
+
+        <!-- Activity Declaration -->
+        <activity android:name=".PencaharianPenggunaActivity" />
+        <activity android:name=".DirectMessageWApenjual" />
+        <activity android:name=".DirectWhatsApp" />
+        <activity android:name=".PenjualChatActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".DetailPesananPenjualActivity" />
+        <activity android:name=".TokoRiviewsActivity" />
+        <activity android:name=".MenulisReviewActivity" />
+        <activity android:name=".user.DetailPesananPenggunaActivity" />
+        <activity
+            android:name=".TokoDetailActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".EditProdukActivity" />
+        <activity android:name=".TambahProdukActivity" />
+        <activity android:name=".penjual.EditProfilePenjualActivity" />
+        <activity android:name=".user.EditProfilePenggunaActivity" />
+        <activity android:name=".user.MainPenggunaActivity" />
+        <activity android:name=".penjual.MainPenjualActivity" />
+        <activity android:name=".LupaPasswordActivity" />
+        <activity android:name=".user.RegisterPenggunaActivity" />
+        <activity android:name=".penjual.RegisterPenjualActivity" />
+        <activity android:name=".LoginActivity" />
+
+        <!-- Launcher Activity -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- UCrop library -->
+
+        <!-- Firebase Messaging Service -->
+        <service
+            android:name=".FirebaseMessage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Optional: Font preloading -->
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+
+</manifest>
