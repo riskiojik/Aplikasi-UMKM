@@ -1,0 +1,186 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".penjual.RegisterPenjualActivity">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/blueawan"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_baseline_arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Kembali"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Daftar Pengguna"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <ImageButton
+            android:id="@+id/gps_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_gps_fixed"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Tombol GPS"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/categoryIbtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_toStartOf="@id/gps_btn"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_baseline_assignment_category"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Kategori"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+    <!-- Icon Kunci -->
+    <ImageView
+        android:id="@+id/key_login"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_01"
+        android:src="@drawable/ic_baseline_key" />
+
+    <!-- Form Pendaftaran -->
+    <RelativeLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/key_login"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="10dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/profileTv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_baseline_person_yelow"
+            android:backgroundTint="@android:color/white"
+            app:fabCustomSize="60dp"
+            app:elevation="6dp" />
+
+
+        <EditText
+            android:id="@+id/nameEt"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/profileTv"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape_01"
+            android:drawableStart="@drawable/ic_baseline_person_black"
+            android:drawablePadding="10dp"
+            android:fontFamily="sans-serif"
+            android:hint="Nama Lengkap"
+            android:padding="10dp"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/nameEt"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape_01"
+            android:drawableStart="@drawable/ic_baseline_email"
+            android:drawablePadding="10dp"
+            android:fontFamily="sans-serif"
+            android:hint="Email"
+            android:padding="10dp"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/passwordEt"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/emailEt"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape_01"
+            android:drawableStart="@drawable/ic_baseline_lock"
+            android:drawablePadding="10dp"
+            android:fontFamily="sans-serif"
+            android:hint="Password"
+            android:padding="10dp"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/confirPasswordEt"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/passwordEt"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape_01"
+            android:drawableStart="@drawable/ic_baseline_lock"
+            android:drawablePadding="10dp"
+            android:fontFamily="sans-serif"
+            android:hint="Konfirmasi Password"
+            android:padding="10dp"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirPasswordEt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/blueawan"
+            android:text="Daftar"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+    </RelativeLayout>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blueawan"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

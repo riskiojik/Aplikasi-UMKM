@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="8dp">
+
+    <!-- Tombol Next -->
+    <ImageButton
+        android:id="@+id/nextIv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_baseline_navigate_next"
+        android:contentDescription="Lanjut ke detail"
+        android:scaleType="centerInside"
+        android:padding="8dp" />
+
+    <!-- Tanggal -->
+    <TextView
+        android:id="@+id/waktuTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/nextIv"
+        android:layout_toStartOf="@id/nextIv"
+        android:layout_marginEnd="48dp"
+        android:text="01/06/2025"
+        android:textColor="@color/merah"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif" />
+
+    <!-- ID Pesanan -->
+    <TextView
+        android:id="@+id/pesananTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nextIv"
+        android:layout_marginTop="8dp"
+        android:text="Pesanan : 1234"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif" />
+
+    <!-- Nama Toko -->
+    <TextView
+        android:id="@+id/namaTokoTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pesananTv"
+        android:layout_marginTop="4dp"
+        android:text="Nama Toko"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif" />
+
+    <!-- Jumlah Item -->
+    <TextView
+        android:id="@+id/jumlahTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/namaTokoTv"
+        android:layout_marginTop="4dp"
+        android:text="Jumlah : 2 Produk"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif" />
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/statusTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jumlahTv"
+        android:layout_marginTop="4dp"
+        android:text="Sedang Proses"
+        android:textColor="@color/teal_200"
+        android:fontFamily="sans-serif" />
+</RelativeLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "208832160658",
+    "project_id": "dataumkm-a5b97",
+    "storage_bucket": "dataumkm-a5b97.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208832160658:android:835bd95253f1252d76974b",
+        "android_client_info": {
+          "package_name": "com.example.aplikasiumkm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBidVA259B2-kIAErDFjmQAL5u8HVhk9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

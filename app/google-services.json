@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "395909756670",
+    "project_id": "aplikasi-umkm-2e1f2",
+    "storage_bucket": "aplikasi-umkm-2e1f2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395909756670:android:d7274f7a6ebf681a2c97af",
+        "android_client_info": {
+          "package_name": "com.example.aplikasiumkm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0oor5hcdBTQ0UJbEIHsTUMq18XUYRvAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

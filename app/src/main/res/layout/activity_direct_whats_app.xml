@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F558E"
+    tools:context=".DirectWhatsApp">
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/directWA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="DIRECT MESSAGE WHATSAPP"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif" />
+
+    <!-- Subjudul -->
+    <TextView
+        android:id="@+id/pemilikToko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/directWA"
+        android:layout_centerHorizontal="true"
+        android:text="KEPEMILIK TOKO"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif" />
+
+    <!-- Card Form -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pemilikToko"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/numberWAEt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Masukkan nomer WA"
+                android:fontFamily="sans-serif"
+                android:background="@android:drawable/edit_text"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/pesanEt"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Tulis pesan.."
+                android:fontFamily="sans-serif"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:background="@android:drawable/edit_text"
+                android:padding="10dp"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Tombol Kirim -->
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="SEND"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif" />
+
+</RelativeLayout>

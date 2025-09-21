@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".PesananActivity">
+
+    <!-- Konten Scroll -->
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Judul -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PESANAN"
+                android:textAlignment="center"
+                android:background="@color/blueawan"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:paddingVertical="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Nama Toko -->
+            <TextView
+                android:id="@+id/namaTokoTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="TOKO BU SUHINI"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Garis pemisah -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#7A7A7A"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Daftar Item -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cartItemRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                tools:listitem="@layout/row_cart_item"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <!-- Total Harga -->
+            <RelativeLayout
+                android:id="@+id/hargaLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="16dp">
+
+                <!-- Subtotal -->
+                <TextView
+                    android:id="@+id/stotalHargaTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Total"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/sTotalTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Rp. 1000"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <!-- Biaya Pengantaran -->
+                <TextView
+                    android:id="@+id/stotalDeliveryTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stotalHargaTv"
+                    android:layout_marginTop="10dp"
+                    android:text="Biaya Pengantaran"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/sDeliveryTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sTotalTv"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Rp. 4000"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <!-- Garis Bawah -->
+                <View
+                    android:id="@+id/garisBawah"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/stotalDeliveryTv"
+                    android:layout_marginTop="12dp"
+                    android:background="#7C7C7C" />
+
+                <!-- Total Harga -->
+                <TextView
+                    android:id="@+id/sTotalHargaTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/garisBawah"
+                    android:layout_marginTop="16dp"
+                    android:text="Total Harga"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/TotalHargaTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/garisBawah"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="16dp"
+                    android:text="Rp. 5000"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <!-- Tombol Konfirmasi -->
+            <Button
+                android:id="@+id/KonfirmasiPesanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Konfirmasi Pesanan"
+                android:background="@color/bluedark"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:paddingVertical="12dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blueawan"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

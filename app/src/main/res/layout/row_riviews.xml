@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/profileLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/profileTv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_person_black"
+            app:civ_border="true"
+            app:civ_border_color="@color/bluedark"
+            app:civ_border_width="1dp"
+            android:layout_marginEnd="5dp" />
+
+        <TextView
+            android:id="@+id/namaTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/bluedark"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileLl"
+        style="@style/Widget.AppCompat.RatingBar.Small" />
+
+    <TextView
+        android:id="@+id/dateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dd/MM/yyyy"
+        android:layout_below="@id/profileLl"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="sans-serif" />
+
+    <TextView
+        android:id="@+id/riviewsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Komentar"
+        android:layout_below="@id/ratingBar"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif" />
+</RelativeLayout>

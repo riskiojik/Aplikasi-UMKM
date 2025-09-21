@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AplikasiTitipOnline</string>
+    <string name="title1">Have an already account ?</string>
+    <string name="user">Username</string>
+    <string name="password">Password</string>
+    <string name="forgetpassword">Forget Password</string>
+    <string name="daftarPejual">Apakah anda memiliki toko? <b> Registrasi Penjual</b></string>
+    <string name="daftarPengguna">Apakah anda memiliki akun? <b> Registrasi Pengguna</b></string>
+    <string name="perhatian"><b>Perhatian !!</b> <br> Update Lokasi di profile anda</br></string>
+
+
+    //spinner
+    <string-array name="jk">
+        <item>Jenis Kelamin</item>
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
